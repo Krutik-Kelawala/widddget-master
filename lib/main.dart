@@ -4,7 +4,7 @@ import 'imagecrop.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: imagepick(),
+    home: mainpg(),
   ));
 }
 
@@ -106,7 +106,13 @@ class _mainpgState extends State<mainpg> {
                     content: Text("Helllo !"),
                     action: SnackBarAction(
                       label: "ok",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(
+                          builder: (context) {
+                            return imagepick();
+                          },
+                        ));
+                      },
                     ),
                   ));
                 },
